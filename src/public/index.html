@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hub editorial offseason Lakers Brasil 2026" />
+  <title>LBR · Hub Offseason 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-tag">LBR</span>
+        <span class="brand-title">Hub Offseason <span class="accent">2026</span></span>
+      </div>
+      <nav class="topnav">
+        <a href="#visao-geral">Visão</a>
+        <a href="#calendario">Calendário</a>
+        <a href="#pillars">Pillars</a>
+        <a href="#noticias">Notícias</a>
+        <a href="#rumores">Rumores</a>
+        <a href="#analises">Análises</a>
+        <a href="#kpis">KPIs</a>
+        <a href="#descartes">Descartes</a>
+      </nav>
+      <div class="topbar-actions">
+        <span id="status-indicator" class="status">Carregando…</span>
+        <button id="login-btn" class="btn btn-ghost" type="button">Entrar</button>
+        <button id="save-btn" class="btn btn-primary" type="button" disabled>Salvar</button>
+        <button id="export-btn" class="btn btn-ghost" type="button" title="Baixar JSON">Export</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- VISÃO GERAL -->
+    <section id="visao-geral" class="section">
+      <div class="section-head">
+        <h1>Visão Geral</h1>
+        <p class="muted">Plano editorial Lakers Brasil — jun a out/26. Baseado nas análises de 28/05/26.</p>
+      </div>
+      <div class="overview-grid">
+        <div class="card stat">
+          <span class="stat-label">Pillars planejados</span>
+          <span class="stat-value" id="stat-pillars">—</span>
+          <span class="stat-foot" id="stat-pillars-status">3 novos + 2 refreshes</span>
+        </div>
+        <div class="card stat">
+          <span class="stat-label">Notícias no backlog</span>
+          <span class="stat-value" id="stat-news">—</span>
+          <span class="stat-foot">Disparadas por gatilho</span>
+        </div>
+        <div class="card stat">
+          <span class="stat-label">Análises programadas</span>
+          <span class="stat-value" id="stat-analyses">—</span>
+          <span class="stat-foot">1 por evento marcante</span>
+        </div>
+        <div class="card stat highlight">
+          <span class="stat-label">Meta jul/26</span>
+          <span class="stat-value">≥ 150k</span>
+          <span class="stat-foot">cliques (mês mais quente da offseason)</span>
+        </div>
+      </div>
+
+      <div class="card notes-card">
+        <div class="card-head">
+          <h3>Notas gerais</h3>
+          <span class="muted small" id="last-updated">—</span>
+        </div>
+        <textarea id="global-notes" class="textarea" placeholder="Notas, decisões, contextos compartilhados com a equipe…" rows="4"></textarea>
+      </div>
+    </section>
+
+    <!-- CALENDÁRIO -->
+    <section id="calendario" class="section">
+      <div class="section-head">
+        <h2>Calendário NBA — jun a out/26</h2>
+        <p class="muted">Eventos drivers de tráfego. Cobertura definida com base no escopo editorial.</p>
+      </div>
+      <div class="card">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width:140px">Janela</th>
+              <th>Evento</th>
+              <th>Cobertura LBR</th>
+            </tr>
+          </thead>
+          <tbody id="calendar-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- PILLARS -->
+    <section id="pillars" class="section">
+      <div class="section-head">
+        <h2>Pillars Evergreen</h2>
+        <p class="muted">3 pillars novos + 2 refreshes. Patrimônio durável de SEO.</p>
+      </div>
+      <div id="pillars-grid" class="pillars-grid"></div>
+    </section>
+
+    <!-- NOTÍCIAS TIMING -->
+    <section id="noticias" class="section">
+      <div class="section-head">
+        <h2>Backlog de notícias timing</h2>
+        <p class="muted">Notícias com gatilho específico. Publicar dentro de 2h do evento. Title literal = query mental.</p>
+      </div>
+      <div class="card">
+        <table class="table table-compact">
+          <thead>
+            <tr>
+              <th style="width:180px">Trigger</th>
+              <th>Formato de title</th>
+              <th style="width:120px">Janela</th>
+              <th style="width:120px">Status</th>
+              <th style="width:120px">Owner</th>
+              <th>Notas</th>
+            </tr>
+          </thead>
+          <tbody id="news-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- RUMORES -->
+    <section id="rumores" class="section">
+      <div class="section-head">
+        <h2>Pipeline de rumores reportados</h2>
+        <p class="muted">Cobertura de rumor REAL de fonte externa creditável (Woj, Shams, Charania, ESPN, Athletic). NÃO especulação interna.</p>
+      </div>
+
+      <div class="card subdued">
+        <h3 class="card-title">Templates de title</h3>
+        <ul class="template-list" id="rumors-templates"></ul>
+      </div>
+
+      <div class="rumors-grid" id="rumors-grid"></div>
+    </section>
+
+    <!-- ANÁLISES -->
+    <section id="analises" class="section">
+      <div class="section-head">
+        <h2>Análises editoriais</h2>
+        <p class="muted">5 análises ao longo da janela, gatilhadas por evento (não por cota mensal).</p>
+      </div>
+      <div id="analyses-grid" class="analyses-grid"></div>
+    </section>
+
+    <!-- KPIs -->
+    <section id="kpis" class="section">
+      <div class="section-head">
+        <h2>KPIs mensais</h2>
+        <p class="muted">Tracking de cliques, CTR e share dos pillars evergreen. Input manual no fechamento do mês.</p>
+      </div>
+      <div class="card">
+        <table class="table">
+          <thead>
+            <tr>
+              <th style="width:80px">Mês</th>
+              <th>Cliques (meta / real)</th>
+              <th>CTR (meta / real)</th>
+              <th>Evergreen share (meta / real)</th>
+              <th>Peças (meta / real)</th>
+              <th>Notas</th>
+            </tr>
+          </thead>
+          <tbody id="kpis-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- DESCARTES -->
+    <section id="descartes" class="section">
+      <div class="section-head">
+        <h2>Descartes explícitos</h2>
+        <p class="muted">O que NÃO fazer. Lista de formatos/abordagens vetados.</p>
+      </div>
+      <div class="card discards-card">
+        <ul id="discards-list" class="discards-list"></ul>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span>Hub criado em 28/05/26 · Design Ideal · Lakers Brasil</span>
+      <span class="muted" id="footer-version">v0.1.0</span>
+    </footer>
+  </main>
+
+  <!-- LOGIN MODAL -->
+  <div id="login-modal" class="modal" hidden>
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <h3>Entrar pra editar</h3>
+      <p class="muted small">Sem senha você pode visualizar tudo, mas não salvar mudanças.</p>
+      <input id="login-password" class="input" type="password" placeholder="Senha da equipe" autocomplete="current-password" />
+      <p id="login-error" class="error-msg" hidden></p>
+      <div class="modal-actions">
+        <button id="login-cancel" class="btn btn-ghost" type="button">Cancelar</button>
+        <button id="login-submit" class="btn btn-primary" type="button">Entrar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

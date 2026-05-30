@@ -1,0 +1,9 @@
+node_modules/
+.env
+.env.local
+data/state.json
+data/state.json.bak
+*.log
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,185 @@
+{
+  "meta": {
+    "version": "0.1.0",
+    "lastUpdated": "2026-05-28T16:00:00.000Z",
+    "lastUpdatedBy": "renato",
+    "title": "Hub Editorial Offseason Lakers Brasil 2026"
+  },
+  "calendar": [
+    { "date": "2026-06-04", "end": "2026-06-22", "event": "NBA Finals (G1 a G7)", "coverage": "NÃO cobrir (canibaliza identidade Lakers)" },
+    { "date": "2026-06-26", "end": "2026-06-27", "event": "NBA Draft 2026", "coverage": "Cobrir: pillar + notícia do pick + análise" },
+    { "date": "2026-06-30", "end": "2026-06-30", "event": "Free Agency abre (negociação)", "coverage": "Máquina de notícia timing ativa" },
+    { "date": "2026-07-06", "end": "2026-07-06", "event": "Assinaturas oficiais começam", "coverage": "Cobertura intensiva de cada movimento" },
+    { "date": "2026-07-05", "end": "2026-07-13", "event": "Summer League Las Vegas", "coverage": "Pillar + pré-jogo de cada partida Lakers" },
+    { "date": "2026-09-20", "end": "2026-09-30", "event": "Media Day + Training Camp", "coverage": "Refresh elenco + análise expectativa" },
+    { "date": "2026-10-15", "end": "2026-10-21", "event": "Pré-temporada NBA", "coverage": "Pré-jogo cada amistoso Lakers" }
+  ],
+  "pillars": [
+    {
+      "id": "free-agency",
+      "name": "Free Agency Lakers 2026 — guia completo",
+      "url": "/free-agency/free-agency-lakers-2026/",
+      "window": "15/06 – 31/07",
+      "query": "free agency lakers 2026, lebron james free agency",
+      "status": "nao-iniciado",
+      "owner": "",
+      "targetPublishDate": "2026-06-15",
+      "publishedUrl": "",
+      "notes": "Pillar mais importante da offseason. Janela de 6 semanas. Foco em LeBron UFA + Reaves extensão + outros free agents Lakers. Atualizar diariamente entre 30/06 e 15/07.",
+      "metrics": { "clicks7d": null, "clicks30d": null, "ctr": null, "position": null }
+    },
+    {
+      "id": "draft",
+      "name": "NBA Draft 2026 Lakers — pick, prospects, análise",
+      "url": "/draft/draft-nba-2026-lakers/",
+      "window": "10/06 – 28/06",
+      "query": "draft nba 2026 lakers, pick lakers 2026",
+      "status": "nao-iniciado",
+      "owner": "",
+      "targetPublishDate": "2026-06-10",
+      "publishedUrl": "",
+      "notes": "Publicar 3-4 semanas antes do evento (Google indexar). Cobrir prospects que se encaixam em LA. Atualizar imediatamente após o pick (26-27/06).",
+      "metrics": { "clicks7d": null, "clicks30d": null, "ctr": null, "position": null }
+    },
+    {
+      "id": "summer-league",
+      "name": "Summer League Lakers 2026",
+      "url": "/summer-league/lakers-summer-league-2026/",
+      "window": "28/06 – 15/07",
+      "query": "lakers summer league 2026",
+      "status": "nao-iniciado",
+      "owner": "",
+      "targetPublishDate": "2026-06-28",
+      "publishedUrl": "",
+      "notes": "Hub com calendário SL Lakers + roster + onde assistir cada jogo. Foco no rookie do draft (após 26-27/06).",
+      "metrics": { "clicks7d": null, "clicks30d": null, "ctr": null, "position": null }
+    },
+    {
+      "id": "elenco-refresh",
+      "name": "Elenco Lakers 2026/27 (refresh em tempo real)",
+      "url": "/elenco/",
+      "window": "jun – out",
+      "query": "elenco lakers 2026/27",
+      "status": "existe-refresh",
+      "owner": "",
+      "targetPublishDate": "2026-06-30",
+      "publishedUrl": "https://lakersbrasil.com/elenco/",
+      "notes": "Página existente. Atualizar a cada movimento de roster (sign/trade/waive).",
+      "metrics": { "clicks7d": null, "clicks30d": null, "ctr": null, "position": null }
+    },
+    {
+      "id": "calendario-refresh",
+      "name": "Calendário Lakers 2026/27",
+      "url": "/calendario/",
+      "window": "quando sair (jul/ago)",
+      "query": "calendario lakers 2026/27",
+      "status": "aguardando-fonte",
+      "owner": "",
+      "targetPublishDate": "2026-08-15",
+      "publishedUrl": "https://lakersbrasil.com/calendario/",
+      "notes": "NBA solta calendário oficial em ago. Página existente, atualizar com novo calendário no mesmo dia do anúncio.",
+      "metrics": { "clicks7d": null, "clicks30d": null, "ctr": null, "position": null }
+    }
+  ],
+  "newsBacklog": [
+    { "id": "n1", "trigger": "Pick do Lakers no Draft", "titleFormat": "[Jogador] é a escolha do Lakers no Draft 2026", "window": "26-27/06", "month": "jun", "status": "aguardando", "owner": "", "notes": "" },
+    { "id": "n2", "trigger": "Decisão de LeBron (free agency)", "titleFormat": "LeBron James [decide X]: o que muda no Lakers", "window": "30/06 – 10/07", "month": "jun-jul", "status": "aguardando", "owner": "", "notes": "Sem 'impasse R$50M' no title. Confirmar status UFA em Spotrac antes." },
+    { "id": "n3", "trigger": "Austin Reaves extensão/decisão", "titleFormat": "Austin Reaves [assina/renova] com o Lakers: detalhes do acordo", "window": "01/07 – 15/07", "month": "jul", "status": "aguardando", "owner": "", "notes": "" },
+    { "id": "n4", "trigger": "Cada free agent Lakers (sign/sai)", "titleFormat": "[Jogador] [assina/renova/sai] do Lakers: detalhes do acordo", "window": "30/06 – 31/07", "month": "jun-jul", "status": "aguardando", "owner": "", "notes": "Replicar pra cada movimento. Título com nome do jogador no início." },
+    { "id": "n5", "trigger": "Cada troca / sign / waive", "titleFormat": "Lakers [acerta/troca/dispensa] [Jogador]: o que muda", "window": "jun-set", "month": "rolling", "status": "aguardando", "owner": "", "notes": "" },
+    { "id": "n6", "trigger": "Lesão/cirurgia de jogador-chave", "titleFormat": "[Jogador] passa por [procedimento]: tempo de recuperação", "window": "conforme acontece", "month": "rolling", "status": "aguardando", "owner": "", "notes": "" },
+    { "id": "n7", "trigger": "Cada jogo Summer League Lakers", "titleFormat": "Onde assistir Lakers x [Time] na Summer League", "window": "05/07 – 13/07", "month": "jul", "status": "aguardando", "owner": "", "notes": "Replicar pra cada jogo da SL." },
+    { "id": "n8", "trigger": "Anúncio calendário 2026/27", "titleFormat": "Calendário Lakers 2026/27: confira todos os jogos da nova temporada", "window": "ago", "month": "ago", "status": "aguardando", "owner": "", "notes": "" },
+    { "id": "n9", "trigger": "Media Day Lakers", "titleFormat": "Onde assistir Media Day do Lakers e o que esperar", "window": "set", "month": "set", "status": "aguardando", "owner": "", "notes": "" },
+    { "id": "n10", "trigger": "Cada jogo da pré-temporada", "titleFormat": "Onde assistir Lakers x [Time] na pré-temporada", "window": "out", "month": "out", "status": "aguardando", "owner": "", "notes": "" }
+  ],
+  "rumorsPipeline": {
+    "jun": [],
+    "jul": [],
+    "ago": [],
+    "set": [],
+    "out": []
+  },
+  "rumorsTemplates": [
+    { "trigger": "Woj/Shams reporta interesse Lakers em X", "titleFormat": "Lakers de olho em [Jogador], reporta [Fonte]" },
+    { "trigger": "Trade rumor envolvendo Lakers", "titleFormat": "Lakers pode negociar [Jogador A] por [Jogador B]: detalhes do rumor" },
+    { "trigger": "Insider revela bastidor", "titleFormat": "[Jornalista]: 'Lakers está priorizando [X]' — o que isso significa" },
+    { "trigger": "Conexão de LeBron com outro time", "titleFormat": "LeBron James é alvo do [Time], reporta [Fonte]" }
+  ],
+  "analyses": [
+    { "id": "a1", "theme": "Análise do draft Lakers", "publishDate": "2026-06-28", "titleTemplate": "Por que o Lakers escolheu [Jogador]: o encaixe técnico no elenco", "status": "nao-iniciado", "owner": "", "notes": "" },
+    { "id": "a2", "theme": "Análise pós-free agency (semana 1)", "publishDate": "2026-07-08", "titleTemplate": "O que muda no Lakers após a primeira semana de free agency", "status": "nao-iniciado", "owner": "", "notes": "" },
+    { "id": "a3", "theme": "Análise Summer League", "publishDate": "2026-07-14", "titleTemplate": "O que [Jogador rookie] mostrou na Summer League e o que isso significa", "status": "nao-iniciado", "owner": "", "notes": "" },
+    { "id": "a4", "theme": "Análise do elenco fechado", "publishDate": "2026-08-15", "titleTemplate": "O Lakers 2026/27 está pronto para X: análise tática do elenco", "status": "nao-iniciado", "owner": "", "notes": "" },
+    { "id": "a5", "theme": "Expectativa training camp", "publishDate": "2026-09-25", "titleTemplate": "Lakers no training camp: as 3 questões em aberto", "status": "nao-iniciado", "owner": "", "notes": "" }
+  ],
+  "discards": [
+    "Cluster de 15-25 satélites de 'rumores LeBron' (flash sem cauda)",
+    "Listas especulativas internas ('5 trocas que o Lakers PODERIA fazer')",
+    "Title com terminologia interna (impasse R$50M, as 4 saídas, jargão de redação)",
+    "Cobertura de Finals NBA (canibaliza identidade Lakers)",
+    "Cobertura de premiações já anunciadas há semanas (timing perdido)",
+    "Tradução de notícia genérica sem ângulo Lakers (sem diferencial vs GE/ESPN/Lance!)",
+    "Artigos sem confirmar status contratual (UFA/RFA/player option/team option) em Spotrac/HoopsHype/Basketball Reference"
+  ],
+  "kpis": {
+    "monthly": {
+      "jun": {
+        "clicksTarget": null,
+        "clicksActual": null,
+        "ctrTarget": 2.0,
+        "ctrActual": null,
+        "evergreenShareTarget": 35,
+        "evergreenShareActual": null,
+        "piecesTarget": "15-19",
+        "piecesActual": null,
+        "notes": ""
+      },
+      "jul": {
+        "clicksTarget": 150000,
+        "clicksActual": null,
+        "ctrTarget": 2.0,
+        "ctrActual": null,
+        "evergreenShareTarget": 35,
+        "evergreenShareActual": null,
+        "piecesTarget": "20-25",
+        "piecesActual": null,
+        "notes": "Mês mais quente da offseason. Free agency + Summer League."
+      },
+      "ago": {
+        "clicksTarget": null,
+        "clicksActual": null,
+        "ctrTarget": 2.0,
+        "ctrActual": null,
+        "evergreenShareTarget": 35,
+        "evergreenShareActual": null,
+        "piecesTarget": "9-13",
+        "piecesActual": null,
+        "notes": "Silly season. Calendário 2026/27 sai aqui."
+      },
+      "set": {
+        "clicksTarget": null,
+        "clicksActual": null,
+        "ctrTarget": 2.0,
+        "ctrActual": null,
+        "evergreenShareTarget": 35,
+        "evergreenShareActual": null,
+        "piecesTarget": "9-12",
+        "piecesActual": null,
+        "notes": "Media Day + Training Camp."
+      },
+      "out": {
+        "clicksTarget": null,
+        "clicksActual": null,
+        "ctrTarget": 2.0,
+        "ctrActual": null,
+        "evergreenShareTarget": 35,
+        "evergreenShareActual": null,
+        "piecesTarget": "7-10",
+        "piecesActual": null,
+        "notes": "Pré-temporada + Opening Night."
+      }
+    }
+  },
+  "globalNotes": "Hub criado em 28/05/26 com base nas análises GSC abril/26 + revisões D+7 (LeBron R$50M) e D+14 (LeBron Clippers). Documento mestre em LBR_PlanoOffseason_DI_28-05-26.md no Desktop."
+}
