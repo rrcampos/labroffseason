@@ -17,6 +17,7 @@ const NEWS_STATUS_OPTIONS = [
   { value: 'publicado', label: 'Publicado' },
   { value: 'cancelado', label: 'Cancelado' },
 ];
+const OWNERS = ['Paola Zanon', 'Renato Campos', 'Leticia Ariosi'];
 const MONTHS = [
   { key: 'jun', label: 'Jun/26' },
   { key: 'jul', label: 'Jul/26' },
@@ -264,6 +265,28 @@ function statusSelect(value, options, onChange) {
   return sel;
 }
 
+function ownerSelect(value, onChange) {
+  const sel = document.createElement('select');
+  sel.className = 'select';
+  const blank = document.createElement('option');
+  blank.value = '';
+  blank.textContent = '—';
+  if (!value) blank.selected = true;
+  sel.appendChild(blank);
+  OWNERS.forEach((name) => {
+    const opt = document.createElement('option');
+    opt.value = name;
+    opt.textContent = name;
+    if (name === value) opt.selected = true;
+    sel.appendChild(opt);
+  });
+  sel.addEventListener('change', (e) => {
+    onChange(e.target.value);
+    markDirty();
+  });
+  return sel;
+}
+
 function renderPillars() {
   const grid = $('#pillars-grid');
   grid.innerHTML = '';
@@ -290,7 +313,7 @@ function renderPillars() {
       </div>
       <div class="pillar-row">
         <span class="label">Owner</span>
-        <input class="input input-inline" data-field="owner" value="${escapeAttr(p.owner)}" placeholder="quem cuida" />
+        <span class="value" data-owner-slot></span>
       </div>
       <div class="pillar-row">
         <span class="label">Data alvo</span>
@@ -327,6 +350,10 @@ function renderPillars() {
       badge.outerHTML = statusBadge(v);
     }));
 
+    card.querySelector('[data-owner-slot]').appendChild(ownerSelect(p.owner, (v) => {
+      state.pillars[idx].owner = v;
+    }));
+
     card.querySelectorAll('input[data-field], textarea[data-field]').forEach((el) => {
       el.addEventListener('input', () => {
         const field = el.dataset.field;
@@ -359,12 +386,15 @@ function renderNews() {
       <td><code class="muted small">${escapeHtml(n.titleFormat)}</code></td>
       <td>${escapeHtml(n.window)}</td>
       <td data-field="status"></td>
-      <td><input class="input input-inline" data-field="owner" value="${escapeAttr(n.owner)}" placeholder="owner" /></td>
+      <td data-owner-slot></td>
       <td><input class="input input-inline" data-field="notes" value="${escapeAttr(n.notes)}" placeholder="notas…" /></td>
     `;
     const statusTd = tr.querySelector('[data-field="status"]');
     statusTd.appendChild(statusSelect(n.status, NEWS_STATUS_OPTIONS, (v) => {
       state.newsBacklog[idx].status = v;
+    }));
+    tr.querySelector('[data-owner-slot]').appendChild(ownerSelect(n.owner, (v) => {
+      state.newsBacklog[idx].owner = v;
     }));
 
     tr.querySelectorAll('input[data-field]').forEach((el) => {
@@ -459,13 +489,16 @@ function renderAnalyses() {
       </div>
       <div class="pillar-row">
         <span class="label">Owner</span>
-        <input class="input input-inline" data-field="owner" value="${escapeAttr(a.owner)}" placeholder="owner" />
+        <span class="value" data-owner-slot></span>
       </div>
       <textarea class="textarea" data-field="notes" rows="2" placeholder="Notas…">${escapeHtml(a.notes || '')}</textarea>
     `;
     const statusSpan = card.querySelector('[data-field="status"]');
     statusSpan.appendChild(statusSelect(a.status, STATUS_OPTIONS, (v) => {
       state.analyses[idx].status = v;
+    }));
+    card.querySelector('[data-owner-slot]').appendChild(ownerSelect(a.owner, (v) => {
+      state.analyses[idx].owner = v;
     }));
     card.querySelectorAll('input[data-field], textarea[data-field]').forEach((el) => {
       el.addEventListener('input', () => {
