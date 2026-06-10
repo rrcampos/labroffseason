@@ -139,7 +139,7 @@
   "kpis": {
     "monthly": {
       "jun": {
-        "sessionsTarget": null,
+        "sessionsTarget": 290000,
         "sessionsActual": null,
         "discoverTarget": null,
         "discoverActual": null,
@@ -150,7 +150,7 @@
         "notes": ""
       },
       "jul": {
-        "sessionsTarget": null,
+        "sessionsTarget": 432000,
         "sessionsActual": null,
         "discoverTarget": null,
         "discoverActual": null,
@@ -161,7 +161,7 @@
         "notes": "Mês mais quente da offseason. Free agency + Summer League."
       },
       "ago": {
-        "sessionsTarget": null,
+        "sessionsTarget": 483000,
         "sessionsActual": null,
         "discoverTarget": null,
         "discoverActual": null,
@@ -172,7 +172,7 @@
         "notes": "Silly season. Calendário 2026/27 sai aqui."
       },
       "set": {
-        "sessionsTarget": null,
+        "sessionsTarget": 334000,
         "sessionsActual": null,
         "discoverTarget": null,
         "discoverActual": null,
@@ -183,7 +183,7 @@
         "notes": "Media Day + Training Camp."
       },
       "out": {
-        "sessionsTarget": null,
+        "sessionsTarget": 469000,
         "sessionsActual": null,
         "discoverTarget": null,
         "discoverActual": null,
