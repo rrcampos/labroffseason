@@ -128,14 +128,7 @@
     { "id": "a4", "theme": "Análise do elenco fechado", "publishDate": "2026-08-15", "titleTemplate": "O Lakers 2026/27 está pronto para X: análise tática do elenco", "status": "nao-iniciado", "owner": "", "notes": "" },
     { "id": "a5", "theme": "Expectativa training camp", "publishDate": "2026-09-25", "titleTemplate": "Lakers no training camp: as 3 questões em aberto", "status": "nao-iniciado", "owner": "", "notes": "" }
   ],
-  "discards": [
-    "Listas especulativas internas ('5 trocas que o Lakers PODERIA fazer')",
-    "Title com terminologia interna (impasse R$50M, as 4 saídas, jargão de redação)",
-    "Cobertura de Finals NBA (canibaliza identidade Lakers)",
-    "Cobertura de premiações já anunciadas há semanas (timing perdido)",
-    "Tradução de notícia genérica sem ângulo Lakers (sem diferencial vs GE/ESPN/Lance!)",
-    "Artigos sem confirmar status contratual (UFA/RFA/player option/team option) em Spotrac/HoopsHype/Basketball Reference"
-  ],
+  "discards": [],
   "kpis": {
     "monthly": {
       "jun": {

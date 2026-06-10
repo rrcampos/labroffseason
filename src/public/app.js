@@ -574,20 +574,6 @@ function renderKpis() {
 }
 
 /* ============================================
-   RENDER — discards
-   ============================================ */
-
-function renderDiscards() {
-  const ul = $('#discards-list');
-  ul.innerHTML = '';
-  (state.discards || []).forEach((d) => {
-    const li = document.createElement('li');
-    li.textContent = d;
-    ul.appendChild(li);
-  });
-}
-
-/* ============================================
    RENDER ALL
    ============================================ */
 
@@ -600,7 +586,6 @@ function renderAll() {
   renderRumors();
   renderAnalyses();
   renderKpis();
-  renderDiscards();
   $('#footer-version').textContent = `v${state.meta?.version || '0.1.0'}`;
 }
 
