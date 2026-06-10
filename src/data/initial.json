@@ -139,10 +139,10 @@
   "kpis": {
     "monthly": {
       "jun": {
-        "clicksTarget": null,
-        "clicksActual": null,
-        "ctrTarget": 2.0,
-        "ctrActual": null,
+        "sessionsTarget": null,
+        "sessionsActual": null,
+        "discoverTarget": null,
+        "discoverActual": null,
         "evergreenShareTarget": 35,
         "evergreenShareActual": null,
         "piecesTarget": "15-19",
@@ -150,10 +150,10 @@
         "notes": ""
       },
       "jul": {
-        "clicksTarget": 150000,
-        "clicksActual": null,
-        "ctrTarget": 2.0,
-        "ctrActual": null,
+        "sessionsTarget": null,
+        "sessionsActual": null,
+        "discoverTarget": null,
+        "discoverActual": null,
         "evergreenShareTarget": 35,
         "evergreenShareActual": null,
         "piecesTarget": "20-25",
@@ -161,10 +161,10 @@
         "notes": "Mês mais quente da offseason. Free agency + Summer League."
       },
       "ago": {
-        "clicksTarget": null,
-        "clicksActual": null,
-        "ctrTarget": 2.0,
-        "ctrActual": null,
+        "sessionsTarget": null,
+        "sessionsActual": null,
+        "discoverTarget": null,
+        "discoverActual": null,
         "evergreenShareTarget": 35,
         "evergreenShareActual": null,
         "piecesTarget": "9-13",
@@ -172,10 +172,10 @@
         "notes": "Silly season. Calendário 2026/27 sai aqui."
       },
       "set": {
-        "clicksTarget": null,
-        "clicksActual": null,
-        "ctrTarget": 2.0,
-        "ctrActual": null,
+        "sessionsTarget": null,
+        "sessionsActual": null,
+        "discoverTarget": null,
+        "discoverActual": null,
         "evergreenShareTarget": 35,
         "evergreenShareActual": null,
         "piecesTarget": "9-12",
@@ -183,10 +183,10 @@
         "notes": "Media Day + Training Camp."
       },
       "out": {
-        "clicksTarget": null,
-        "clicksActual": null,
-        "ctrTarget": 2.0,
-        "ctrActual": null,
+        "sessionsTarget": null,
+        "sessionsActual": null,
+        "discoverTarget": null,
+        "discoverActual": null,
         "evergreenShareTarget": 35,
         "evergreenShareActual": null,
         "piecesTarget": "7-10",

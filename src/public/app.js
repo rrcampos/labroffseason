@@ -535,8 +535,8 @@ function renderKpis() {
 
   MONTHS.forEach((m) => {
     const k = state.kpis?.monthly?.[m.key] || {};
-    const clicksT = k.clicksTarget ? k.clicksTarget.toLocaleString('pt-BR') : '—';
-    const ctrT = k.ctrTarget ? k.ctrTarget.toFixed(1) + '%' : '—';
+    const sessT = k.sessionsTarget ? k.sessionsTarget.toLocaleString('pt-BR') : '—';
+    const discT = k.discoverTarget ? k.discoverTarget + '%' : '—';
     const evgT = k.evergreenShareTarget ? k.evergreenShareTarget + '%' : '—';
     const pcsT = escapeHtml(k.piecesTarget || '—');
 
@@ -547,8 +547,8 @@ function renderKpis() {
         <span class="kpi-month">${m.label}</span>
       </div>
       <div class="kpi-metrics">
-        ${metric('Cliques', clicksT, 'clicksActual', `type="number" value="${k.clicksActual ?? ''}"`)}
-        ${metric('CTR', ctrT, 'ctrActual', `type="number" step="0.01" value="${k.ctrActual ?? ''}"`)}
+        ${metric('Sessões', sessT, 'sessionsActual', `type="number" value="${k.sessionsActual ?? ''}"`)}
+        ${metric('Discover', discT, 'discoverActual', `type="number" value="${k.discoverActual ?? ''}"`)}
         ${metric('Evergreen', evgT, 'evergreenShareActual', `type="number" value="${k.evergreenShareActual ?? ''}"`)}
         ${metric('Peças', pcsT, 'piecesActual', `type="number" value="${k.piecesActual ?? ''}"`)}
       </div>
