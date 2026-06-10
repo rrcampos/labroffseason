@@ -141,7 +141,7 @@
       "jun": {
         "sessionsTarget": 290000,
         "sessionsActual": null,
-        "discoverTarget": null,
+        "discoverTarget": 49000,
         "discoverActual": null,
         "evergreenShareTarget": 35,
         "evergreenShareActual": null,
@@ -152,7 +152,7 @@
       "jul": {
         "sessionsTarget": 432000,
         "sessionsActual": null,
-        "discoverTarget": null,
+        "discoverTarget": 103000,
         "discoverActual": null,
         "evergreenShareTarget": 35,
         "evergreenShareActual": null,
@@ -163,7 +163,7 @@
       "ago": {
         "sessionsTarget": 483000,
         "sessionsActual": null,
-        "discoverTarget": null,
+        "discoverTarget": 186000,
         "discoverActual": null,
         "evergreenShareTarget": 35,
         "evergreenShareActual": null,
@@ -174,7 +174,7 @@
       "set": {
         "sessionsTarget": 334000,
         "sessionsActual": null,
-        "discoverTarget": null,
+        "discoverTarget": 134000,
         "discoverActual": null,
         "evergreenShareTarget": 35,
         "evergreenShareActual": null,
@@ -185,7 +185,7 @@
       "out": {
         "sessionsTarget": 469000,
         "sessionsActual": null,
-        "discoverTarget": null,
+        "discoverTarget": 187000,
         "discoverActual": null,
         "evergreenShareTarget": 35,
         "evergreenShareActual": null,

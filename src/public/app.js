@@ -536,7 +536,7 @@ function renderKpis() {
   MONTHS.forEach((m) => {
     const k = state.kpis?.monthly?.[m.key] || {};
     const sessT = k.sessionsTarget ? k.sessionsTarget.toLocaleString('pt-BR') : '—';
-    const discT = k.discoverTarget ? k.discoverTarget + '%' : '—';
+    const discT = k.discoverTarget ? k.discoverTarget.toLocaleString('pt-BR') : '—';
     const evgT = k.evergreenShareTarget ? k.evergreenShareTarget + '%' : '—';
     const pcsT = escapeHtml(k.piecesTarget || '—');
 
