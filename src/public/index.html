@@ -7,26 +7,17 @@
   <title>LBR · Hub Offseason 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700&family=Fraunces:ital,wght@1,400;1,500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
+  <!-- TOPBAR -->
   <header class="topbar">
     <div class="topbar-inner">
       <div class="brand">
-        <span class="brand-tag">LBR</span>
-        <span class="brand-title">Hub Offseason <span class="accent">2026</span></span>
+        <div class="brand-mark">LBR</div>
+        <div class="brand-text">Lakers Brasil<small>Hub Editorial · Offseason</small></div>
       </div>
-      <nav class="topnav">
-        <a href="#visao-geral">Visão</a>
-        <a href="#calendario">Calendário</a>
-        <a href="#pillars">Pillars</a>
-        <a href="#noticias">Notícias</a>
-        <a href="#rumores">Rumores</a>
-        <a href="#analises">Análises</a>
-        <a href="#kpis">KPIs</a>
-        <a href="#descartes">Descartes</a>
-      </nav>
       <div class="topbar-actions">
         <span id="status-indicator" class="status">Carregando…</span>
         <button id="login-btn" class="btn btn-ghost" type="button">Entrar</button>
@@ -36,166 +27,221 @@
     </div>
   </header>
 
-  <main class="container">
-    <!-- VISÃO GERAL / HERO -->
-    <section id="visao-geral" class="section hero">
-      <div class="hero-head">
-        <span class="eyebrow">Lakers Brasil · Plano Editorial</span>
-        <h1>Offseason <span class="accent">2026</span></h1>
-        <p class="hero-sub">O mapa de produção entre o Draft e a Opening Night. Pillars de SEO, notícias por gatilho, rumores reportados e análises, num lugar só, de junho a outubro.</p>
-        <div class="hero-meta">
-          <span><strong>Janela</strong> jun a out/26</span>
-          <span><strong>Equipe</strong> Paola, Renato, Leticia</span>
-          <span><strong>Base</strong> análises de 28/05/26</span>
+  <div class="container">
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="eyebrow"><span class="dot"></span>Plano Editorial · Lakers Brasil</div>
+      <h1>Toda a <span class="accent">offseason 2026</span> do Lakers, num painel só.</h1>
+      <p class="hero-sub">
+        O mapa de produção entre o <b>Draft</b> e a <b>Opening Night</b>. Pillars de SEO, notícias por gatilho, rumores reportados, análises e KPIs, organizados de junho a outubro para a equipe trabalhar no mesmo ritmo.
+      </p>
+      <div class="timeframe">
+        <div class="timeframe-block">
+          <div class="timeframe-label">Janela</div>
+          <div class="timeframe-date">Jun a Out 2026</div>
+          <div class="timeframe-detail">Do Draft à pré-temporada</div>
+        </div>
+        <div class="timeframe-block">
+          <div class="timeframe-label">Equipe</div>
+          <div class="timeframe-date">Paola · Renato · Leticia</div>
+          <div class="timeframe-detail">Produção e revisão editorial</div>
+        </div>
+        <div class="timeframe-block">
+          <div class="timeframe-label">Atualizado</div>
+          <div class="timeframe-date" id="last-updated">—</div>
+          <div class="timeframe-detail">Estado vivo do plano</div>
         </div>
       </div>
-      <div class="overview-grid">
-        <div class="card stat">
-          <span class="stat-label">Pillars planejados</span>
-          <span class="stat-value" id="stat-pillars">—</span>
-          <span class="stat-foot" id="stat-pillars-status">3 novos + 2 refreshes</span>
+    </div>
+
+    <!-- CAP 01 — VISÃO GERAL -->
+    <div class="chapter">
+      <div class="chapter-num">01</div>
+      <div class="chapter-title">Capítulo<b>Visão geral</b></div>
+    </div>
+    <section id="visao-geral">
+      <div class="section-tag">O plano em números</div>
+      <h2>Conteúdo durável, notícia no timing, rumor com fonte.</h2>
+      <p class="section-lead">
+        A offseason se ganha em três frentes: páginas âncora que capturam busca o ano todo, notícias publicadas no minuto do gatilho e rumores reportados com fonte creditável. Abaixo, o tamanho de cada frente.
+      </p>
+
+      <div class="headline-numbers">
+        <div class="hn-block">
+          <div class="hn-label">Pillars de SEO</div>
+          <div class="hn-value neutral" id="stat-pillars">—</div>
+          <div class="hn-detail" id="stat-pillars-status"><b>3 novos</b> + 2 refreshes. Patrimônio durável de busca.</div>
         </div>
-        <div class="card stat">
-          <span class="stat-label">Notícias no backlog</span>
-          <span class="stat-value" id="stat-news">—</span>
-          <span class="stat-foot">Disparadas por gatilho</span>
+        <div class="hn-block">
+          <div class="hn-label">Notícias no backlog</div>
+          <div class="hn-value neutral" id="stat-news">—</div>
+          <div class="hn-detail">Prontas pra subir, <b>disparadas por gatilho</b> de evento.</div>
         </div>
-        <div class="card stat">
-          <span class="stat-label">Análises programadas</span>
-          <span class="stat-value" id="stat-analyses">—</span>
-          <span class="stat-foot">1 por evento marcante</span>
-        </div>
-        <div class="card stat highlight">
-          <span class="stat-label">Meta jul/26</span>
-          <span class="stat-value">≥ 150k</span>
-          <span class="stat-foot">cliques (mês mais quente da offseason)</span>
+        <div class="hn-block">
+          <div class="hn-label">Análises programadas</div>
+          <div class="hn-value neutral" id="stat-analyses">—</div>
+          <div class="hn-detail"><b>1 por evento</b> marcante, leitura em vez de cobertura.</div>
         </div>
       </div>
 
-      <div class="card notes-card">
-        <div class="card-head">
-          <h3>Notas gerais</h3>
-          <span class="muted small" id="last-updated">—</span>
-        </div>
-        <textarea id="global-notes" class="textarea" placeholder="Notas, decisões, contextos compartilhados com a equipe…" rows="4"></textarea>
+      <div class="notes-block">
+        <div class="section-tag mini">Notas da equipe</div>
+        <textarea id="global-notes" class="textarea" placeholder="Notas, decisões e contextos compartilhados com a equipe…" rows="3"></textarea>
       </div>
     </section>
 
-    <!-- CALENDÁRIO -->
-    <section id="calendario" class="section">
-      <div class="section-head">
-        <h2>Calendário NBA — jun a out/26</h2>
-        <p class="muted">Eventos drivers de tráfego. Cobertura definida com base no escopo editorial.</p>
-      </div>
-      <div class="card">
-        <table class="table">
-          <thead>
-            <tr>
-              <th style="width:140px">Janela</th>
-              <th>Evento</th>
-              <th>Cobertura LBR</th>
-            </tr>
-          </thead>
-          <tbody id="calendar-body"></tbody>
-        </table>
-      </div>
+    <!-- CAP 02 — CALENDÁRIO -->
+    <div class="chapter">
+      <div class="chapter-num">02</div>
+      <div class="chapter-title">Capítulo<b>Calendário</b></div>
+    </div>
+    <section id="calendario">
+      <div class="section-tag">Os eventos que puxam tráfego</div>
+      <h2>Do Draft à pré-temporada: o que cobrir e o que deixar passar.</h2>
+      <p class="section-lead">
+        Cada evento da offseason é um pico de busca. A coluna de cobertura define onde o Lakers Brasil entra com força e onde fica de fora de propósito, pra não diluir a identidade da marca.
+      </p>
+      <table class="ctable">
+        <thead>
+          <tr>
+            <th style="width:150px">Janela</th>
+            <th>Evento</th>
+            <th>Cobertura Lakers Brasil</th>
+          </tr>
+        </thead>
+        <tbody id="calendar-body"></tbody>
+      </table>
     </section>
 
-    <!-- PILLARS -->
-    <section id="pillars" class="section">
-      <div class="section-head">
-        <h2>Pillars Evergreen</h2>
-        <p class="muted">3 pillars novos + 2 refreshes. Patrimônio durável de SEO.</p>
-      </div>
+    <!-- CAP 03 — PILLARS -->
+    <div class="chapter">
+      <div class="chapter-num">03</div>
+      <div class="chapter-title">Capítulo<b>Pillars evergreen</b></div>
+    </div>
+    <section id="pillars">
+      <div class="section-tag">Patrimônio de SEO</div>
+      <h2>Páginas âncora pra capturar a busca da offseason inteira.</h2>
+      <p class="section-lead">
+        Três pillars novos e dois refreshes de páginas existentes. São os conteúdos que rankeiam por meses e sustentam o tráfego quando a notícia esfria. Edite status, owner, data alvo e métricas em cada card.
+      </p>
       <div id="pillars-grid" class="pillars-grid"></div>
     </section>
 
-    <!-- NOTÍCIAS TIMING -->
-    <section id="noticias" class="section">
-      <div class="section-head">
-        <h2>Backlog de notícias timing</h2>
-        <p class="muted">Notícias com gatilho específico. Publicar dentro de 2h do evento. Title literal = query mental.</p>
-      </div>
-      <div class="card">
-        <table class="table table-compact">
-          <thead>
-            <tr>
-              <th style="width:180px">Trigger</th>
-              <th>Formato de title</th>
-              <th style="width:120px">Janela</th>
-              <th style="width:120px">Status</th>
-              <th style="width:120px">Owner</th>
-              <th>Notas</th>
-            </tr>
-          </thead>
-          <tbody id="news-body"></tbody>
-        </table>
-      </div>
+    <!-- CAP 04 — NOTÍCIAS -->
+    <div class="chapter">
+      <div class="chapter-num">04</div>
+      <div class="chapter-title">Capítulo<b>Notícias por gatilho</b></div>
+    </div>
+    <section id="noticias">
+      <div class="section-tag">Publicar no minuto do gatilho</div>
+      <h2>Matérias prontas pra subir assim que o evento acontece.</h2>
+      <p class="section-lead">
+        Cada notícia tem um gatilho específico e um formato de título já definido. Quando o evento dispara, a meta é publicar dentro de duas horas, com o título batendo a busca mental do torcedor.
+      </p>
+      <table class="ctable">
+        <thead>
+          <tr>
+            <th style="width:180px">Gatilho</th>
+            <th>Formato de título</th>
+            <th style="width:110px">Janela</th>
+            <th style="width:130px">Status</th>
+            <th style="width:130px">Owner</th>
+            <th>Notas</th>
+          </tr>
+        </thead>
+        <tbody id="news-body"></tbody>
+      </table>
     </section>
 
-    <!-- RUMORES -->
-    <section id="rumores" class="section">
-      <div class="section-head">
-        <h2>Pipeline de rumores reportados</h2>
-        <p class="muted">Cobertura de rumor REAL de fonte externa creditável (Woj, Shams, Charania, ESPN, Athletic). NÃO especulação interna.</p>
-      </div>
+    <!-- CAP 05 — RUMORES -->
+    <div class="chapter">
+      <div class="chapter-num">05</div>
+      <div class="chapter-title">Capítulo<b>Rumores reportados</b></div>
+    </div>
+    <section id="rumores">
+      <div class="section-tag">Só rumor real, com fonte</div>
+      <h2>Cobertura de rumor reportado, nunca especulação interna.</h2>
+      <p class="section-lead">
+        O Lakers Brasil cobre rumor de fonte externa creditável (Woj, Shams, Charania, ESPN, The Athletic), nunca chute de redação. Use os templates de título e registre cada rumor no mês correspondente.
+      </p>
 
-      <div class="card subdued">
-        <h3 class="card-title">Templates de title</h3>
+      <div class="rumors-templates-block">
+        <div class="section-tag mini">Templates de título</div>
         <ul class="template-list" id="rumors-templates"></ul>
       </div>
 
       <div class="rumors-grid" id="rumors-grid"></div>
     </section>
 
-    <!-- ANÁLISES -->
-    <section id="analises" class="section">
-      <div class="section-head">
-        <h2>Análises editoriais</h2>
-        <p class="muted">5 análises ao longo da janela, gatilhadas por evento (não por cota mensal).</p>
-      </div>
+    <!-- CAP 06 — ANÁLISES -->
+    <div class="chapter">
+      <div class="chapter-num">06</div>
+      <div class="chapter-title">Capítulo<b>Análises editoriais</b></div>
+    </div>
+    <section id="analises">
+      <div class="section-tag">Leitura, não cobertura</div>
+      <h2>Cinco análises ancoradas nos momentos que importam.</h2>
+      <p class="section-lead">
+        Diferente da notícia, a análise é gatilhada por evento marcante (não por cota mensal) e entrega leitura própria. É o conteúdo que mostra autoridade e separa o Lakers Brasil do feed genérico.
+      </p>
       <div id="analyses-grid" class="analyses-grid"></div>
     </section>
 
-    <!-- KPIs -->
-    <section id="kpis" class="section">
-      <div class="section-head">
-        <h2>KPIs mensais</h2>
-        <p class="muted">Tracking de cliques, CTR e share dos pillars evergreen. Input manual no fechamento do mês.</p>
-      </div>
-      <div class="card">
-        <table class="table">
-          <thead>
-            <tr>
-              <th style="width:80px">Mês</th>
-              <th>Cliques (meta / real)</th>
-              <th>CTR (meta / real)</th>
-              <th>Evergreen share (meta / real)</th>
-              <th>Peças (meta / real)</th>
-              <th>Notas</th>
-            </tr>
-          </thead>
-          <tbody id="kpis-body"></tbody>
-        </table>
-      </div>
+    <!-- CAP 07 — KPIs -->
+    <div class="chapter">
+      <div class="chapter-num">07</div>
+      <div class="chapter-title">Capítulo<b>KPIs mensais</b></div>
+    </div>
+    <section id="kpis">
+      <div class="section-tag">Como medimos o mês</div>
+      <h2>Metas de cliques, CTR e share evergreen, mês a mês.</h2>
+      <p class="section-lead">
+        Meta de um lado, realizado do outro. O realizado entra no fechamento de cada mês, puxado do Search Console. Julho é o mês mais quente da offseason, com free agency e Summer League juntos.
+      </p>
+      <table class="ctable">
+        <thead>
+          <tr>
+            <th style="width:80px">Mês</th>
+            <th>Cliques (meta / real)</th>
+            <th>CTR (meta / real)</th>
+            <th>Evergreen (meta / real)</th>
+            <th>Peças (meta / real)</th>
+            <th>Notas</th>
+          </tr>
+        </thead>
+        <tbody id="kpis-body"></tbody>
+      </table>
     </section>
 
-    <!-- DESCARTES -->
-    <section id="descartes" class="section">
-      <div class="section-head">
-        <h2>Descartes explícitos</h2>
-        <p class="muted">O que NÃO fazer. Lista de formatos/abordagens vetados.</p>
-      </div>
-      <div class="card discards-card">
+    <!-- CAP 08 — DESCARTES -->
+    <div class="chapter">
+      <div class="chapter-num">08</div>
+      <div class="chapter-title">Capítulo<b>Descartes</b></div>
+    </div>
+    <section id="descartes">
+      <div class="section-tag">O que não fazer</div>
+      <h2>O que fica de fora, de propósito.</h2>
+      <p class="section-lead">
+        Tão importante quanto o que produzir é o que recusar. Esta lista existe pra proteger o foco e a identidade da marca quando a tentação do volume aparecer.
+      </p>
+      <div class="discards-block">
         <ul id="discards-list" class="discards-list"></ul>
       </div>
     </section>
 
-    <footer class="footer">
-      <span>Hub criado em 28/05/26 · Design Ideal · Lakers Brasil</span>
-      <span class="muted" id="footer-version">v0.1.0</span>
+    <!-- FOOTER -->
+    <footer>
+      <div class="f-left">
+        <div class="brand-mark">LBR</div>
+        <div class="f-text"><b>Lakers Brasil</b><br>Hub Editorial · Offseason 2026</div>
+      </div>
+      <div class="f-text" style="text-align:right;">
+        Design Ideal<br><span id="footer-version" class="muted">v0.1.0</span>
+      </div>
     </footer>
-  </main>
+
+  </div>
 
   <!-- LOGIN MODAL -->
   <div id="login-modal" class="modal" hidden>
