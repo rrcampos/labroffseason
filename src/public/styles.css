@@ -80,7 +80,7 @@ p { margin: 0.25rem 0; }
 }
 
 .topbar-inner {
-  max-width: 1400px;
+  max-width: 1180px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -241,24 +241,111 @@ p { margin: 0.25rem 0; }
    ============================================ */
 
 .container {
-  max-width: 1400px;
+  max-width: 1180px;
   margin: 0 auto;
-  padding: 2rem 1.5rem 4rem;
+  padding: 2.5rem 1.5rem 4rem;
+  counter-reset: chapter;
 }
 
 .section {
-  margin-bottom: 4rem;
-  scroll-margin-top: 80px;
+  margin-bottom: 5rem;
+  scroll-margin-top: 90px;
+}
+
+.section:not(.hero) {
+  border-top: 1px solid var(--border);
+  padding-top: 3rem;
 }
 
 .section-head {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.75rem;
+  position: relative;
+  padding-left: 4.75rem;
+  min-height: 3rem;
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  justify-content: center;
+  gap: 0.35rem;
 }
 
-.section-head p { font-size: 0.9375rem; }
+.section-head::before {
+  counter-increment: chapter;
+  content: counter(chapter, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 2.75rem;
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.85;
+}
+
+.section-head p { font-size: 0.9375rem; max-width: 64ch; }
+
+/* ============================================
+   HERO
+   ============================================ */
+
+.hero {
+  margin-bottom: 4.5rem;
+}
+
+.hero-head {
+  padding: 1rem 0 0;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: 3.75rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.hero-sub {
+  font-size: 1.1875rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  max-width: 60ch;
+  margin-bottom: 1.5rem;
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+
+.hero-meta strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-faint);
+  margin-bottom: 0.2rem;
+}
+
+.hero-meta > span:not(.muted) { color: var(--text); }
 
 /* ============================================
    CARDS
@@ -830,6 +917,12 @@ p { margin: 0.25rem 0; }
   .analyses-grid { grid-template-columns: 1fr; }
   h1 { font-size: 1.5rem; }
   h2 { font-size: 1.25rem; }
+  .hero h1 { font-size: 2.5rem; }
+  .hero-sub { font-size: 1rem; }
+  .hero-meta { gap: 1rem; }
+  .section:not(.hero) { padding-top: 2rem; }
+  .section-head { padding-left: 3.25rem; }
+  .section-head::before { font-size: 1.875rem; }
   .topbar-inner { gap: 0.75rem; padding: 0.625rem 1rem; }
   .table { font-size: 0.75rem; }
   .table thead th, .table tbody td { padding: 0.5rem; }
