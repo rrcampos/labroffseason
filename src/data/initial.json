@@ -29,6 +29,19 @@
       "metrics": { "clicks7d": null, "clicks30d": null, "ctr": null, "position": null }
     },
     {
+      "id": "lebron-futuro",
+      "name": "Futuro de LeBron James 2026 — fica ou sai?",
+      "url": "/lebron-james/futuro-lebron-james-2026/",
+      "window": "jun – jul",
+      "query": "futuro lebron james 2026, lebron james free agency, lebron fica no lakers",
+      "status": "nao-iniciado",
+      "owner": "",
+      "targetPublishDate": "2026-06-15",
+      "publishedUrl": "",
+      "notes": "Offseason decisiva de LeBron (UFA). Hub central do tema: situação contratual, cenários (fica / sai / aposenta) e times ligados. Atualizar a cada rumor reportado. Confirmar status UFA e valores no Spotrac antes de publicar. Cobertura com cauda longa, NÃO satélite flash.",
+      "metrics": { "clicks7d": null, "clicks30d": null, "ctr": null, "position": null }
+    },
+    {
       "id": "draft",
       "name": "NBA Draft 2026 Lakers — pick, prospects, análise",
       "url": "/draft/draft-nba-2026-lakers/",
@@ -91,7 +104,9 @@
     { "id": "n7", "trigger": "Cada jogo Summer League Lakers", "titleFormat": "Onde assistir Lakers x [Time] na Summer League", "window": "05/07 – 13/07", "month": "jul", "status": "aguardando", "owner": "", "notes": "Replicar pra cada jogo da SL." },
     { "id": "n8", "trigger": "Anúncio calendário 2026/27", "titleFormat": "Calendário Lakers 2026/27: confira todos os jogos da nova temporada", "window": "ago", "month": "ago", "status": "aguardando", "owner": "", "notes": "" },
     { "id": "n9", "trigger": "Media Day Lakers", "titleFormat": "Onde assistir Media Day do Lakers e o que esperar", "window": "set", "month": "set", "status": "aguardando", "owner": "", "notes": "" },
-    { "id": "n10", "trigger": "Cada jogo da pré-temporada", "titleFormat": "Onde assistir Lakers x [Time] na pré-temporada", "window": "out", "month": "out", "status": "aguardando", "owner": "", "notes": "" }
+    { "id": "n10", "trigger": "Cada jogo da pré-temporada", "titleFormat": "Onde assistir Lakers x [Time] na pré-temporada", "window": "out", "month": "out", "status": "aguardando", "owner": "", "notes": "" },
+    { "id": "n11", "trigger": "Cada rumor reportado sobre LeBron (fonte creditável)", "titleFormat": "LeBron James é ligado a [Time], reporta [Fonte]: o que se sabe", "window": "jun – jul", "month": "jun-jul", "status": "aguardando", "owner": "", "notes": "Só rumor de Woj/Shams/Charania/ESPN/The Athletic. Cada um vira matéria própria com contexto, nunca satélite flash. Linkar sempre ao pillar do futuro de LeBron." },
+    { "id": "n12", "trigger": "LeBron define a situação (fica / sai / aposenta)", "titleFormat": "LeBron James [define]: o que muda no Lakers", "window": "30/06 – 15/07", "month": "jul", "status": "aguardando", "owner": "", "notes": "Matéria-âncora do desfecho. Atualizar o pillar do futuro de LeBron no mesmo momento. Confirmar números no Spotrac." }
   ],
   "rumorsPipeline": {
     "jun": [],
@@ -114,7 +129,6 @@
     { "id": "a5", "theme": "Expectativa training camp", "publishDate": "2026-09-25", "titleTemplate": "Lakers no training camp: as 3 questões em aberto", "status": "nao-iniciado", "owner": "", "notes": "" }
   ],
   "discards": [
-    "Cluster de 15-25 satélites de 'rumores LeBron' (flash sem cauda)",
     "Listas especulativas internas ('5 trocas que o Lakers PODERIA fazer')",
     "Title com terminologia interna (impasse R$50M, as 4 saídas, jargão de redação)",
     "Cobertura de Finals NBA (canibaliza identidade Lakers)",
