@@ -517,43 +517,48 @@ function renderAnalyses() {
 function renderKpis() {
   const body = $('#kpis-body');
   body.innerHTML = '';
+
+  const metric = (label, targetText, field, inputAttrs) => `
+    <div class="kpi-metric">
+      <span class="kpi-metric-label">${label}</span>
+      <div class="kpi-metric-vals">
+        <div class="kpi-side">
+          <small>Meta</small>
+          <span class="kpi-meta-val">${targetText}</span>
+        </div>
+        <div class="kpi-side">
+          <small>Real</small>
+          <input class="input input-inline kpi-real-input" data-field="${field}" ${inputAttrs} placeholder="—" />
+        </div>
+      </div>
+    </div>`;
+
   MONTHS.forEach((m) => {
     const k = state.kpis?.monthly?.[m.key] || {};
-    const tr = document.createElement('tr');
-    tr.innerHTML = `
-      <td><strong>${m.label}</strong></td>
-      <td>
-        <div class="kpi-cell">
-          <span class="kpi-target ${k.clicksTarget ? '' : 'muted'}">${k.clicksTarget?.toLocaleString('pt-BR') || '—'}</span>
-          <span class="kpi-sep">/</span>
-          <input class="input kpi-actual" type="number" data-field="clicksActual" value="${k.clicksActual ?? ''}" placeholder="real" />
-        </div>
-      </td>
-      <td>
-        <div class="kpi-cell">
-          <span class="kpi-target">${k.ctrTarget ? k.ctrTarget.toFixed(1) + '%' : '—'}</span>
-          <span class="kpi-sep">/</span>
-          <input class="input kpi-actual" type="number" step="0.01" data-field="ctrActual" value="${k.ctrActual ?? ''}" placeholder="real" />
-        </div>
-      </td>
-      <td>
-        <div class="kpi-cell">
-          <span class="kpi-target">${k.evergreenShareTarget ? k.evergreenShareTarget + '%' : '—'}</span>
-          <span class="kpi-sep">/</span>
-          <input class="input kpi-actual" type="number" data-field="evergreenShareActual" value="${k.evergreenShareActual ?? ''}" placeholder="real" />
-        </div>
-      </td>
-      <td>
-        <div class="kpi-cell">
-          <span class="kpi-target">${escapeHtml(k.piecesTarget || '—')}</span>
-          <span class="kpi-sep">/</span>
-          <input class="input kpi-actual" type="number" data-field="piecesActual" value="${k.piecesActual ?? ''}" placeholder="real" />
-        </div>
-      </td>
-      <td><input class="input input-inline" data-field="notes" value="${escapeAttr(k.notes)}" placeholder="notas…" /></td>
+    const clicksT = k.clicksTarget ? k.clicksTarget.toLocaleString('pt-BR') : '—';
+    const ctrT = k.ctrTarget ? k.ctrTarget.toFixed(1) + '%' : '—';
+    const evgT = k.evergreenShareTarget ? k.evergreenShareTarget + '%' : '—';
+    const pcsT = escapeHtml(k.piecesTarget || '—');
+
+    const card = document.createElement('div');
+    card.className = 'kpi-card';
+    card.innerHTML = `
+      <div class="kpi-card-head">
+        <span class="kpi-month">${m.label}</span>
+      </div>
+      <div class="kpi-metrics">
+        ${metric('Cliques', clicksT, 'clicksActual', `type="number" value="${k.clicksActual ?? ''}"`)}
+        ${metric('CTR', ctrT, 'ctrActual', `type="number" step="0.01" value="${k.ctrActual ?? ''}"`)}
+        ${metric('Evergreen', evgT, 'evergreenShareActual', `type="number" value="${k.evergreenShareActual ?? ''}"`)}
+        ${metric('Peças', pcsT, 'piecesActual', `type="number" value="${k.piecesActual ?? ''}"`)}
+      </div>
+      <div class="kpi-note">
+        <small>Nota do mês</small>
+        <input class="input input-inline kpi-note-input" data-field="notes" value="${escapeAttr(k.notes)}" placeholder="sem nota…" />
+      </div>
     `;
 
-    tr.querySelectorAll('input[data-field]').forEach((el) => {
+    card.querySelectorAll('input[data-field]').forEach((el) => {
       el.addEventListener('input', () => {
         if (!state.kpis) state.kpis = { monthly: {} };
         if (!state.kpis.monthly[m.key]) state.kpis.monthly[m.key] = {};
@@ -564,7 +569,7 @@ function renderKpis() {
       });
     });
 
-    body.appendChild(tr);
+    body.appendChild(card);
   });
 }
 

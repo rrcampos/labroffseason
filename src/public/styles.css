@@ -652,17 +652,80 @@ h2 {
    KPIs
    ============================================ */
 
-.kpi-cell { display: flex; gap: 8px; align-items: center; }
-.kpi-target {
+.kpis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.kpi-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--ink);
+  padding: 22px 24px;
+}
+
+.kpi-card-head { margin-bottom: 8px; }
+.kpi-month {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: -0.5px;
+}
+
+.kpi-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 24px; }
+
+.kpi-metric { border-top: 1px solid var(--line); padding-top: 12px; }
+.kpi-metric-label {
+  display: block;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--ink-3);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.kpi-metric-vals { display: flex; gap: 18px; align-items: flex-end; }
+.kpi-side { display: flex; flex-direction: column; gap: 4px; }
+.kpi-side small {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--ink-3);
+  font-weight: 600;
+}
+.kpi-meta-val {
   font-family: var(--font-heading);
   font-weight: 700;
+  font-size: 19px;
   color: var(--ink);
-  font-size: 14px;
-  min-width: 56px;
+  letter-spacing: -0.5px;
 }
-.kpi-target.muted { color: var(--ink-3); }
-.kpi-sep { color: var(--line-strong); }
-.kpi-actual { width: 84px; font-family: var(--font-heading); font-weight: 600; }
+.kpi-real-input {
+  width: 78px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: -0.5px;
+  padding: 2px 6px;
+}
+.kpi-real-input:not(:disabled) {
+  border-color: var(--line-strong);
+  background: var(--paper);
+}
+
+.kpi-note { border-top: 1px solid var(--line); margin-top: 18px; padding-top: 12px; }
+.kpi-note small {
+  display: block;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--ink-3);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.kpi-note-input { width: 100%; font-size: 13px; color: var(--ink-2); }
 
 /* ============================================
    DISCARDS
