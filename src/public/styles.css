@@ -673,9 +673,9 @@ h2 {
   letter-spacing: -0.5px;
 }
 
-.kpi-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 24px; }
+.kpi-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 20px; }
 
-.kpi-metric { border-top: 1px solid var(--line); padding-top: 12px; }
+.kpi-metric { border-top: 1px solid var(--line); padding-top: 12px; min-width: 0; }
 .kpi-metric-label {
   display: block;
   font-size: 10px;
@@ -683,32 +683,36 @@ h2 {
   letter-spacing: 1px;
   color: var(--ink-3);
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
-.kpi-metric-vals { display: flex; gap: 18px; align-items: flex-end; }
-.kpi-side { display: flex; flex-direction: column; gap: 4px; }
+.kpi-metric-vals { display: flex; flex-direction: column; gap: 8px; }
+.kpi-side { display: flex; align-items: center; gap: 8px; min-width: 0; }
 .kpi-side small {
+  flex-shrink: 0;
+  width: 30px;
   font-size: 9px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   color: var(--ink-3);
   font-weight: 600;
 }
 .kpi-meta-val {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 19px;
+  font-size: 17px;
   color: var(--ink);
   letter-spacing: -0.5px;
+  white-space: nowrap;
 }
 .kpi-real-input {
-  width: 78px;
+  flex: 1;
+  min-width: 0;
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 17px;
+  font-size: 16px;
   letter-spacing: -0.5px;
-  padding: 2px 6px;
+  padding: 3px 6px;
 }
 .kpi-real-input:not(:disabled) {
   border-color: var(--line-strong);
